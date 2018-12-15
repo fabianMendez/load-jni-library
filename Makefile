@@ -1,4 +1,5 @@
-CC=gcc
+TOOLCHAIN?=~/toolchains/android-x86
+CC=$(TOOLCHAIN)/bin/i686-linux-android-gcc --sysroot $(TOOLCHAIN)/sysroot/ -I $(TOOLCHAIN)/include/
 FLAGS=-Wall -Werror
 
 libloadme.so: libloadme.o
